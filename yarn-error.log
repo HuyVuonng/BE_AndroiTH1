@@ -19,7 +19,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "web_ban_dong_ho_be",
+    "name": "BE_AndroiTH1",
     "version": "1.0.0",
     "description": "",
     "main": "./src/index.js",
@@ -34,7 +34,7 @@ npm manifest:
       "url": "git+https://github.com/HuyVuonng/BE_AndroiTH1"
     },
     "keywords": [
-      "web_ban_dong_ho_be"
+      "BE_AndroiTH1"
     ],
     "author": "HV",
     "license": "ISC",
