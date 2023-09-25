@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HuyVuonng/web_ban_dong_ho_be.git"
+    "url": "git+https://github.com/HuyVuonng/BE_AndroiTH1"
   },
   "keywords": [
     "web_ban_dong_ho_be"
@@ -19,9 +19,9 @@
   "author": "HV",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HuyVuonng/web_ban_dong_ho_be/issues"
+    "url": "https://github.com/HuyVuonng/BE_AndroiTH1/issues"
   },
-  "homepage": "https://github.com/HuyVuonng/web_ban_dong_ho_be",
+  "homepage": "https://github.com/HuyVuonng/BE_AndroiTH1",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
