@@ -8,7 +8,7 @@ const Account = new Schema(
     name: { type: String },
     dateOfBirth: { type: Date },
     email: { type: String },
-    gender: { type: Boolean },
+    gender: { type: Number },
     password: { type: String },
   },
   {

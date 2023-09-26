@@ -2,7 +2,8 @@ const Account = require("../models/Account");
 class AccountController {
   // [get] /
   getAllAccounts(req, res, next) {
-    Account.find({}).sort({ createdAt: -1 })
+    Account.find({})
+      .sort({ createdAt: -1 })
       .then((accounts) => res.json(accounts))
       .catch(next);
   }
@@ -11,10 +12,23 @@ class AccountController {
   create(req, res, next) {
     const formData = req.body;
     const account = new Account(formData);
-    account
-      .save()
-      .then(() => res.send("Success"))
-      .catch(next);
+    if (formData.gender) {
+      !!formData.gender === true ? (account.gender = 1) : (account.gender = 0);
+    }
+    if (
+      !account.name ||
+      !account.email ||
+      !account.dateOfBirth ||
+      !account.password ||
+      account.gender === undefined
+    ) {
+      res.send("Hãy điền đầy đủ thông tin");
+    } else {
+      account
+        .save()
+        .then(() => res.send("Success"))
+        .catch(next);
+    }
   }
 
   // [get] /newBills
@@ -97,8 +111,6 @@ class AccountController {
       .then((prod) => res.send(prod))
       .catch(next);
   }
-
-  
 
   // [delete] /deleteBill
   deleteBill(req, res, next) {
