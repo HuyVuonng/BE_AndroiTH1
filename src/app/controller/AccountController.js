@@ -13,7 +13,7 @@ class AccountController {
     const formData = req.body;
     const account = new Account(formData);
     if (formData.gender) {
-      !!formData.gender === true ? (account.gender = 1) : (account.gender = 0);
+      formData.gender === "true" ? (account.gender = 1) : (account.gender = 0);
     }
     if (
       !account.name ||
